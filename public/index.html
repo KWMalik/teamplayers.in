@@ -6,9 +6,10 @@
 
 <style type="text/css">
 body {
-	overflow: hidden;
+	overflow: scroll;
 	margin: 20px;
 	width: 970px;
+	background-color: white;
 }
 
 .border {
@@ -56,10 +57,21 @@ a:hover {
 	color: black;
 	text-decoration: underline;
 }
-
-
 </style>
 
+<link type="text/css"
+	href="jquery/css/ui-lightness/jquery-ui-1.8.16.custom.css"
+	rel="stylesheet" />
+
+<script type="text/javascript" src="jquery/js/jquery-1.6.2.min.js"></script>
+<script type="text/javascript"
+	src="jquery/js/jquery-ui-1.8.16.custom.min.js"></script>
+
+<script>
+	$(function() {
+		$("#tabs").tabs();
+	});
+</script>
 
 </head>
 <body>
@@ -68,28 +80,63 @@ a:hover {
 		<h1>Team Players</h1>
 	</div>
 
-	<div class="contents">
 
-		<div class="container border">
-			<h3>We specialize in converting your ideas into solutions using</h3>
+	<div class="demo">
+
+		<div id="tabs" style="min-height: 400px">
 			<ul>
-				<li>Java/J2EE, Spring Framework, ESB (Mule), ORM (Hibernate,
-					JPA)</li>
-				<li>Ruby/JRuby on Rails</li>
-				<li>HTML 5, CSS3, JavaScript</li>
-				<li>Big Data Frameworks - Hadoop, HBase, MongoDB</li>
-				<li>Tomcat 7, JBoss, Phusion Passenger, nginx, Apache</li>
-				<li>Cloud deployment using Rackspace or EngineYard</li>
+				<li><a href="#tabs-1">Services</a></li>
+				<li><a href="#tabs-2">Products</a></li>
+				<li><a href="#tabs-3">Training</a></li>
+				<li><a href="#tabs-4">Open Source</a></li>
 			</ul>
-		</div>
+			<div id="tabs-1">
+				<h3>We specialize in converting your ideas into solutions using</h3>
+				<ul>
+					<li>Java/J2EE, Spring Framework, ESB (Mule), ORM (Hibernate,
+						JPA)</li>
+					<li>Ruby/JRuby on Rails</li>
+					<li>HTML 5, CSS3, JavaScript</li>
+					<li>Big Data Frameworks - Hadoop, HBase, MongoDB</li>
+					<li>Tomcat 7, JBoss, Phusion Passenger, nginx, Apache</li>
+					<li>Cloud deployment using Rackspace or EngineYard</li>
+				</ul>
+			</div>
+			<div id="tabs-2">
+				<h2>Goalkeeper</h2>
+				<h2></h2>
+				<p>A social project management tool for enterprises.</p>
 
+			</div>
+			<div id="tabs-3">
+				<h3>We will provide training in following ares</h3>
+				<ul>
+					<li>Cloud deployment</li>
+					<li>How to design solutions for Big Data</li>
+					<li>Stay on target using Agile methodologies</li>
+				</ul>
+			</div>
+			<div id="tabs-4">
+				<h3>We are active in </h3>
+				<ul>
+					<li>Ruby on RAILS forums</li>
+					<li>Apache HBase forum</li>
+				</ul>
+				<h4>We have extracted few utilties/tools/frameworks based on the work we do for our clients</h4>
+				<ul>
+					<li>yamx - An alternative to JMX</li>
+					<li>multilingual - A tool to maintain resource bundles in multiple langauges.</li>
+					
+				</ul>
+			</div>
+		</div>
 	</div>
 
 	<div class="footer">
-		<span>&copy; Team Players, Not a real company...yet!</span>
-		<span style="float: right;">
-				<a href="http://www.srikanthps.com">Contact</a> | <a href="https://github.com/srikanthps/teamplayers.in">Source code</a></span>
+		<span>&copy; Team Players, Not a real company...yet!</span> <span
+			style="float: right;"> <a href="http://www.srikanthps.com">Contact</a>
+			| <a href="https://github.com/srikanthps/teamplayers.in">Source
+				code</a></span>
 	</div>
-
 </body>
 </html>
