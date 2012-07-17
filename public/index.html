@@ -75,10 +75,10 @@ a:hover {
 
 		<div id="tabs" style="min-height: 400px">
 			<ul>
-				<li><a href="#tabs-1">Services</a></li>
-				<li><a href="#tabs-2">Products</a></li>
-				<li><a href="#tabs-3">Training</a></li>
-				<li><a href="#tabs-4">Open Source</a></li>
+				<li><a href="#tabs-1" onclick="handleTab('Services');">Services</a></li>
+				<li><a href="#tabs-2" onclick="handleTab('Products');">Products</a></li>
+				<li><a href="#tabs-3" onclick="handleTab('Consulting');">Consulting</a></li>
+				<li><a href="#tabs-4" onclick="handleTab('Open Source');">Open Source</a></li>
 			</ul>
 			<div id="tabs-1">
 				<h3>We specialize in converting your ideas into solutions using</h3>
@@ -107,16 +107,7 @@ a:hover {
 				</ul>
 			</div>
 			<div id="tabs-4">
-				<h3>We are active in </h3>
-				<ul>
-					<li>Ruby on RAILS forums</li>
-					<li>Apache HBase forum</li>
-				</ul>
-				<h4>We have extracted few utilties/tools/frameworks based on the work we do for our clients</h4>
-				<ul>
-					<li>yamx - An alternative to JMX</li>
-					<li>multilingual - A tool to maintain resource bundles in multiple langauges.</li>
-					
+				<h3>Watch this space</h3>
 				</ul>
 			</div>
 		</div>
@@ -143,6 +134,22 @@ a:hover {
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
+  var tabCount = 0;
+  function handleTab(tabName) {
+    _gaq.push(['_trackEvent', 'Tabs', 'view', tabName]);
+
+     tabCount++;
+    _gaq.push(['_setCustomVar',
+      1,                   // This custom var is set to slot #1.  Required parameter.
+      'TabViews',     // The name acts as a kind of category for the user activity.  Required parameter.
+      tabCount,               // This value of the custom variable.  Required parameter.
+      2                    // Sets the scope to session-level.  Optional parameter.
+
+    ]);
+
+    return true;
+  }
+
 </script>
 
 <script type="text/javascript" src="jquery/js/jquery-1.6.2.min.js"></script>
@@ -153,6 +160,7 @@ a:hover {
 	$(function() {
 		$("#tabs").tabs();
 	});
+
 </script>
 
 </body>
